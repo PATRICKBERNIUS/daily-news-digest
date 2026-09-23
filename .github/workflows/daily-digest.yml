@@ -34,3 +34,12 @@ jobs:
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+
+
+
+      - name: Send digest emial
+        env:
+            GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+            GMAIL_APP_PASSWORD : ${{ secrets.GMAIL_APP_PASSWORD }}
+
+        run: python src/send_email.py https://patrickbernius.github.io/daily-news-digest/

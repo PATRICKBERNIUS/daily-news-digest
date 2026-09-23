@@ -27,6 +27,7 @@ def dedupe_articles(topic_articles):
     for topic, articles in topic_articles.items():
         for article in articles:
             if is_relevant(article, topic) and article['id'] not in seen_ids:
+                article["matched_topic"] = topic
                 arts.append(article)
                 seen_ids.add(article['id'])
     

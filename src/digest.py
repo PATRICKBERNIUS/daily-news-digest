@@ -53,7 +53,7 @@ def save_digest(formated_articles, output_dir ="data"):
 def format_digest_html(articles):
 
 
-    header = f"Daily News Updates - {datetime.now().strftime('%Y%m%d')}"
+    header = f"Daily News Updates - {datetime.now().strftime('%Y-%m-%d')}"
 
 
     # group articles by their matched topic

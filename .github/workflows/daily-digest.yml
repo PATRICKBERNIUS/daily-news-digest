@@ -25,6 +25,7 @@ jobs:
       - name: Run digest pipeline
         env:
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+          CLAUDE_API: ${{ secrets.CLAUDE_API  }}
 
         run: python src/run.py
 

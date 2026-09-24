@@ -29,7 +29,7 @@ def summarize_articles(articles):
 
     prompt = f"""You are writing a daily news briefing for one reader. Below is a list of today's articles.
 
-    Write a cohesive briefing that synthesizes the most important developments across these articles — group related stories together naturally where it makes sense, rather than listing every article one by one. Use a natural, spoken tone, as if reading this aloud to someone who wants to stay informed without reading the news themselves. Do not use bullet points, headers, or markdown formatting — write in full paragraphs only.
+    Write a cohesive briefing that synthesizes the most important developments across these articles — group related stories together naturally where it makes sense, rather than listing every article one by one. Make sure to identify the big points and updates in Artificial Intelligence, Biotechnology, technology, and health research. Use a natural, spoken tone, as if reading this aloud to someone who wants to stay informed without reading the news themselves. Do not use bullet points, headers, or markdown formatting — write in full paragraphs only.
 
     Today's articles:
     {full_articles_text}

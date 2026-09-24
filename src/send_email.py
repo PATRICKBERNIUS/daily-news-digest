@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import sys
+from llm_summary import load_summary
 
 
 load_dotenv()
@@ -12,7 +13,13 @@ GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 
 def build_email(link):
 
-    message = f"Your daily news digest is ready! Access it here: {link}"
+    summary = load_summary()
+
+    message = f"""Your daily news digest is ready! Here is the summary:
+
+    {summary}
+
+    Access the full articles here: {link}"""
 
     msg = MIMEText(message)
     msg["Subject"] = "Daily News for Patrick"
